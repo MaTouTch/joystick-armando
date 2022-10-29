@@ -43,6 +43,6 @@ basic.forever(function () {
     } else if (WSJoyStick.Listen_Dir(DIR.D_R)) {
         radio.sendString("SR")
     } else {
-        basic.showIcon(IconNames.Happy)
+    	
     }
 })
