@@ -3,6 +3,7 @@ WSJoyStick.onKey(KEY.F, function () {
 })
 WSJoyStick.onKey(KEY.A, function () {
     WSJoyStick.PlayMusic(196, music.beat(BeatFraction.Quarter))
+    radio.sendString("A")
 })
 WSJoyStick.onKey(KEY.E, function () {
     WSJoyStick.PlayMusic(330, music.beat(BeatFraction.Quarter))
@@ -16,6 +17,7 @@ WSJoyStick.onKey(KEY.B, function () {
 WSJoyStick.onKey(KEY.C, function () {
     WSJoyStick.PlayMusic(262, music.beat(BeatFraction.Quarter))
 })
+radio.setGroup(1)
 WSJoyStick.JoyStickInit()
 basic.forever(function () {
     if (WSJoyStick.Listen_Dir(DIR.U)) {
