@@ -17,8 +17,9 @@ WSJoyStick.onKey(KEY.B, function () {
 WSJoyStick.onKey(KEY.C, function () {
     WSJoyStick.PlayMusic(262, music.beat(BeatFraction.Quarter))
 })
-radio.setGroup(1)
 WSJoyStick.JoyStickInit()
+radio.setGroup(1)
+radio.sendString("Joystick")
 basic.forever(function () {
     if (WSJoyStick.Listen_Dir(DIR.U)) {
         basic.showArrow(ArrowNames.North)
@@ -51,6 +52,6 @@ basic.forever(function () {
     } else if (WSJoyStick.Listen_Key(KEY.F)) {
         basic.showString("F")
     } else {
-        basic.showIcon(IconNames.Happy)
+        basic.showIcon(IconNames.Heart)
     }
 })
