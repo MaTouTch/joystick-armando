@@ -2,10 +2,6 @@ WSJoyStick.onKey(KEY.F, function () {
     WSJoyStick.PlayMusic(220, music.beat(BeatFraction.Quarter))
     radio.sendString("F")
 })
-WSJoyStick.onKey(KEY.A, function () {
-    WSJoyStick.PlayMusic(196, music.beat(BeatFraction.Quarter))
-    radio.sendString("A")
-})
 WSJoyStick.onKey(KEY.E, function () {
     WSJoyStick.PlayMusic(330, music.beat(BeatFraction.Quarter))
     radio.sendString("E")
@@ -13,10 +9,6 @@ WSJoyStick.onKey(KEY.E, function () {
 WSJoyStick.onKey(KEY.D, function () {
     WSJoyStick.PlayMusic(294, music.beat(BeatFraction.Quarter))
     radio.sendString("D")
-})
-WSJoyStick.onKey(KEY.B, function () {
-    WSJoyStick.PlayMusic(247, music.beat(BeatFraction.Quarter))
-    radio.sendString("B")
 })
 WSJoyStick.onKey(KEY.C, function () {
     WSJoyStick.PlayMusic(262, music.beat(BeatFraction.Quarter))
@@ -42,6 +34,10 @@ basic.forever(function () {
         radio.sendString("SL")
     } else if (WSJoyStick.Listen_Dir(DIR.D_R)) {
         radio.sendString("SR")
+    } else if (WSJoyStick.Listen_Key(KEY.A)) {
+        radio.sendString("A")
+    } else if (WSJoyStick.Listen_Key(KEY.B)) {
+        radio.sendString("B")
     } else {
     	
     }
