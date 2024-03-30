@@ -53,7 +53,7 @@ basic.forever(function () {
         radio.sendString("B")
     } else {
         kitronik_VIEW128x64.show("Compass : " + convertToText(input.compassHeading()), 2, kitronik_VIEW128x64.ShowAlign.Centre, kitronik_VIEW128x64.FontSelection.Big)
-        kitronik_VIEW128x64.show("Compass : " + convertToText(input.lightLevel()), 3, kitronik_VIEW128x64.ShowAlign.Centre, kitronik_VIEW128x64.FontSelection.Big)
+        kitronik_VIEW128x64.show("Light : " + convertToText(input.lightLevel()), 3, kitronik_VIEW128x64.ShowAlign.Centre, kitronik_VIEW128x64.FontSelection.Big)
         kitronik_VIEW128x64.plot(input.compassHeading())
     }
 })
